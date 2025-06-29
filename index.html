@@ -5,35 +5,60 @@
   <title>Rastreamento Blockchain | Mel do Vale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      --primary: #7a5100;
+      --background: #f8f8f5;
+      --card: #ffffff;
+      --accent: #d8b169;
+      --text: #333;
+      --muted: #777;
+      --border: #e0e0e0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: var(--background);
+      color: var(--text);
       margin: 0;
       padding: 20px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 860px;
       margin: auto;
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.04);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 35px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     }
 
-    h1 {
-      font-size: 1.5em;
-      margin-bottom: 5px;
-      color: #444;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
-    h2 {
-      font-size: 1em;
-      font-weight: normal;
-      color: #777;
+    .header img {
+      height: 60px;
+      width: auto;
+    }
+
+    .title {
+      font-size: 1.7em;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
       margin-bottom: 30px;
+      font-size: 1em;
     }
 
     .data-row {
@@ -50,6 +75,11 @@
       color: #222;
     }
 
+    ul.value {
+      margin-left: 26px;
+      margin-top: 6px;
+    }
+
     code {
       background: #f2f2f2;
       padding: 4px 6px;
@@ -60,19 +90,45 @@
       overflow-x: auto;
     }
 
+    blockquote {
+      font-style: italic;
+      color: #666;
+      margin: 8px 0;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
     footer {
       text-align: center;
       font-size: 0.85em;
       color: #aaa;
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+      }
+
+      .header img {
+        height: 50px;
+      }
+
+      .title {
+        font-size: 1.4em;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>Mel do Vale – Orgânico e Sustentável</h1>
-    <h2>Rastreamento de Lote via Blockchain</h2>
+
+    <div class="header">
+      <img src="logo.png" alt="Logo Mel do Vale">
+      <h1 class="title">Mel do Vale</h1>
+    </div>
+    <p class="subtitle">Rastreamento de lote orgânico via blockchain – Cambará do Sul / RS</p>
 
     <div class="data-row"><span class="label">Produto:</span><span class="value">Mel orgânico - 500g</span></div>
     <div class="data-row"><span class="label">Origem:</span><span class="value">Cambará do Sul, Rio Grande do Sul, Brasil</span></div>
@@ -85,25 +141,30 @@
     <div class="data-row"><span class="label">Produtor:</span><span class="value">Antônio Silveira e Rosa Maria</span></div>
     <div class="data-row"><span class="label">Unidades em lote:</span><span class="value">120 colmeias</span></div>
     <div class="data-row"><span class="label">Área preservada:</span><span class="value">12 hectares de mata nativa</span></div>
+
     <div class="data-row"><span class="label">Práticas ambientais:</span>
       <ul class="value">
         <li>Produção sem defensivos químicos</li>
-        <li>Cultivo de jardins melíferos naturais</li>
+        <li>Cultivo de jardins melíferos</li>
         <li>Educação ambiental comunitária</li>
         <li>Apoio à agricultura familiar</li>
       </ul>
     </div>
+
     <div class="data-row"><span class="label">Mensagem do produtor:</span>
-      <blockquote class="value">"Cada pote deste mel carrega a doçura da Serra, colhido com respeito à natureza e às abelhas."</blockquote>
+      <blockquote>"Cada pote deste mel carrega a doçura da Serra, colhido com respeito à natureza e às abelhas."</blockquote>
     </div>
+
     <div class="data-row"><span class="label">Resumo da origem:</span>
       <p class="value">
-        Técnico agrícola aposentado, Antônio Silveira iniciou sua criação de abelhas em 1995, após acolher um enxame em sua propriedade. Desde 2015, junto a Rosa Maria, mantém produção orgânica nos vales preservados da Serra Gaúcha em Cambará do Sul - RS.
+        Técnico agrícola aposentado, Antônio Silveira iniciou sua criação de abelhas em 1995, após acolher um enxame em sua propriedade. Desde 2015, junto a Rosa Maria, mantém produção orgânica nos vales preservados da Serra Gaúcha.
       </p>
     </div>
+
     <div class="data-row"><span class="label">Hash Blockchain:</span>
       <code>0xd8f3a2c40b76e1f0cfbb6a9ec83529b97ac1e2134fbb20ec97d8c3b8d403ed51</code>
     </div>
+
   </div>
 
   <footer>
@@ -112,4 +173,3 @@
 
 </body>
 </html>
-
